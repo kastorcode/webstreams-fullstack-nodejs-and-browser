@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #F75700;
+  text-decoration: none;
+}
+
+a:hover, .header a:hover {
+  font-weight: bold;
+}
+
+body {
+  background-color: #010515;
+  color: #E5E5E5;
+  margin: 20px;
+}
+
+button {
+  background: linear-gradient(0deg, #010515, #F5EA2E);
+  border: 0;
+  color: #010515;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 20px;
+}
+
+button:hover {
+  background: #F5EA2E;
+  cursor: pointer;
+}
+
+.header {
+  align-items: center;
+  background-color: #010515;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.header a {
+  color: #889DEA;
+  font-weight: lighter;
+}
+
+.grid {
+  align-items: stretch;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.grid article {
+  border: 2px solid #081D6B;
+  display: grid;
+  max-height: 406px;
+  min-height: 253.5px;
+  padding: 20px;
+  position: relative;
+}
+
+.grid article a {
+  bottom: 20px;
+  grid-row: 3;
+  left: 20px;
+  position: absolute;
+}
+
+.grid article a:hover ~ h3, .grid article a:hover ~ p {
+  opacity: 0%;
+}
+
+.grid article a:hover ~ img {
+  opacity: 100%;
+}
+
+.grid article img {
+  height: 100%;
+  left: 0;
+  opacity: 20%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.grid article p {
+  margin: 20px 0px;
+  padding-right: 6px;
+  overflow: auto;
+}
+
+.grid article p:hover ~ img {
+  opacity: 0%;
+}
+
+.grid article p::-webkit-scrollbar {
+  width: 6px;
+}
+
+.grid article p::-webkit-scrollbar-track {
+  background-color: #E5E5E5;
+}
+
+.grid article p::-webkit-scrollbar-thumb {
+  background-color: #F75700;
+}
+
+.grid article p::-webkit-scrollbar-thumb:hover {
+  background-color: #F9894C;
+}

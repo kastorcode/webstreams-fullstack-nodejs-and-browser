@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "clear && node --experimental-specifier-resolution=node --watch index.js"
+  },
+  "keywords": [],
+  "author": "<kastor.code/> Matheus Ramalho de Oliveira",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "stream-concat": "^1.0.0"
+  }
+}
